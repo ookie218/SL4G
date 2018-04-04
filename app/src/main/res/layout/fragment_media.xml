@@ -1,0 +1,172 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:attrs="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.android.sl4g.MediaFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/websiteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textAllCaps="true"
+                android:textAlignment="center"
+                android:paddingTop="8dp"
+                tools:text="websiteName" />
+
+            <android.support.v7.widget.ButtonBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <ImageButton
+                    android:id="@+id/instagramButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/glyphicons_instagram"
+                    android:background="?android:selectableItemBackground"
+                    android:layout_weight="1"/>
+
+                 <ImageButton
+                    android:id="@+id/youtubeButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/glyphicons_youtube"
+                    android:background="?android:selectableItemBackground"
+                    android:layout_weight="1"/>
+
+                <ImageButton
+                    android:id="@+id/twitterButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/glyphicons_twitter"
+                    android:background="?android:selectableItemBackground"
+                    android:layout_weight="1"/>
+
+            </android.support.v7.widget.ButtonBarLayout>
+
+            <!--ADD IN ALBUMS FIRST - THEN ADD IN MUSIC VIDEOS-->
+
+            <TextView
+                android:id="@+id/discographyTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textAllCaps="true"
+                android:textAlignment="center"
+                android:paddingTop="8dp"
+                android:text="@string/discography_tag" />
+
+
+            <android.support.v7.widget.ButtonBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <ImageButton
+                    android:id="@+id/aRoadLessTraveledButton"
+                    android:layout_width="@dimen/album_item_width"
+                    android:layout_height="@dimen/album_item_height"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:src="@drawable/aroadlesstraveledcover"
+                    android:background="?android:selectableItemBackground"
+                    android:layout_weight="1"/>
+
+                <ImageButton
+                    android:id="@+id/waterWalkinButton"
+                    android:layout_width="@dimen/album_item_width"
+                    android:layout_height="@dimen/album_item_height"
+                    android:scaleType="fitXY"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/waterwalkincover"
+                    android:background="?android:selectableItemBackground"
+                    android:layout_weight="1"/>
+
+                <ImageButton
+                    android:id="@+id/noLongerBoundButton"
+                    android:layout_width="@dimen/album_item_width"
+                    android:layout_height="@dimen/album_item_height"
+                    android:scaleType="fitXY"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/nolongerboudcover"
+                    android:background="?android:selectableItemBackground"
+                    android:layout_weight="1"/>
+
+                <ImageButton
+                    android:id="@+id/rhythmOfHeavenButton"
+                    android:layout_width="@dimen/album_item_width"
+                    android:layout_height="@dimen/album_item_height"
+                    android:scaleType="fitXY"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/rhythmofheavencover"
+                    android:background="?android:selectableItemBackground"
+                    android:layout_weight="1"/>
+
+                <ImageButton
+                    android:id="@+id/noBrakesButton"
+                    android:layout_width="@dimen/album_item_width"
+                    android:layout_height="@dimen/album_item_height"
+                    android:scaleType="fitXY"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/nobrakescover"
+                    android:background="?android:selectableItemBackground"
+                    android:layout_weight="1"/>
+
+            </android.support.v7.widget.ButtonBarLayout>
+
+
+
+            <TextView
+                android:id="@+id/videoTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textAllCaps="true"
+                android:textAlignment="center"
+                android:paddingTop="8dp"
+                android:text="@string/music_videos_tag" />
+
+
+
+
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                android:text="@string/referenceYoutubeTag"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
