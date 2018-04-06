@@ -12,6 +12,8 @@
 
     <string name="media_tab">Media</string>
 
+    <string name="contact_tab">Contact</string>
+
     <string name="quiz_heading">How Well Do You Know SwitchinLanes???</string>
 
     <string name="group_bio">"SwitchinLanes" or "SL4G" and was founded in 2014 by Deane Walden.
@@ -88,5 +90,12 @@
     <string name="referenceYoutubeTag">Please visit the Youtube link above to access more of our videos!</string>
     <string name="music_videos_tag">Music Videos</string>
     <string name="discography_tag">Discography</string>
+    <string name="contactPrompt">We greatly appreciate you all taking part on this journey with us as we walk closer to Christ. Please take the opportunity to reach out to us. Rather it be for prayer or to book The Lanes!</string>
+    <string name="name_heading">Name:</string>
+    <string name="name_enter_hint">Enter Name</string>
+    <string name="text_heading">Text:</string>
+    <string name="text_enter_hint">How can we serve you?</string>
+    <string name="prayer_button_label">Prayer</string>
+    <string name="book_us_button_label">Book Us</string>
 
 </resources>
