@@ -2,11 +2,15 @@ package com.example.android.sl4g;
 
 
 import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
@@ -15,6 +19,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.youtube.player.YouTubeInitializationResult;
+import com.google.android.youtube.player.YouTubePlayer;
+import com.google.android.youtube.player.YouTubePlayerFragment;
+import com.google.android.youtube.player.YouTubePlayerSupportFragment;
+import com.google.android.youtube.player.YouTubePlayerView;
 
 
 /**
@@ -30,11 +41,24 @@ public class MediaFragment extends Fragment {
     public static String rhythmOfHeavenUrl = "https://itunes.apple.com/us/album/rhythm-of-heaven/1216497679";
     public static String noBrakesUrl = "https://itunes.apple.com/us/album/no-brakes/1343983901";
 
+    private FragmentActivity myContext;
+    private YouTubePlayer yPlayer;
+
+    public static final String API_KEY = "AIzaSyBKzA3jqDvEd6SvrUAR8ECD7_5MgDlhPJc";
+    public static final String VIDEO_ID = "0taaCWMbJz0";
+
 
     public MediaFragment() {
         // Required empty public constructor
     }
 
+    @Override
+    public void onAttach(Context context) {
+        if (context instanceof FragmentActivity) {
+            myContext = (FragmentActivity) context;
+        }
+        super.onAttach(context);
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -116,6 +140,33 @@ public class MediaFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 buyNoBrakes(getView());
+            }
+        });
+
+        //YouTube Code
+//        YouTubePlayerView youTubePlayerView = (YouTubePlayerView) getView().findViewById(R.id.youtubePlayer);
+//        youTubePlayerView.initialize(API_KEY, this);
+
+
+        YouTubePlayerSupportFragment youtubePlayerFragment = YouTubePlayerSupportFragment.newInstance();
+        FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
+        transaction.add(R.id.youtube_fragment, youtubePlayerFragment).commit();
+
+        youtubePlayerFragment.initialize("DEVELOPER_KEY", new YouTubePlayer.OnInitializedListener() {
+            @Override
+            public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
+                if (!b) {
+                    yPlayer = youTubePlayer;
+                    yPlayer.setFullscreen(false);
+                    yPlayer.loadVideo(VIDEO_ID);
+                    yPlayer.play();
+                }
+            }
+
+
+            @Override
+            public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
+
             }
         });
 
