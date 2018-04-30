@@ -26,8 +26,6 @@ public class CategoryAdapter extends FragmentPagerAdapter{
             return new ArtistMasterFragment();
         } if (position == 2) {
             return new MediaFragment();
-        } if (position == 3) {
-            return new QuizFragment();
         } else {
             return new ContactFragment();
         }
@@ -35,7 +33,7 @@ public class CategoryAdapter extends FragmentPagerAdapter{
 
     @Override
     public int getCount() {
-        return 5;
+        return 4;
     }
 
     public CharSequence getPageTitle(int position){
@@ -45,8 +43,6 @@ public class CategoryAdapter extends FragmentPagerAdapter{
             return mContext.getString(R.string.artist_tab);
         } if (position == 2) {
             return mContext.getString(R.string.media_tab);
-        } if (position == 3) {
-            return mContext.getString(R.string.quiz_tab);
         } else {
             return mContext.getString(R.string.contact_tab);
         }
