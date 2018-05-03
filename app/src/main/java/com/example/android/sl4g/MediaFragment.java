@@ -158,8 +158,7 @@ public class MediaFragment extends Fragment {
                 if (!b) {
                     yPlayer = youTubePlayer;
                     yPlayer.setFullscreen(false);
-                    yPlayer.loadVideo(VIDEO_ID);
-                    yPlayer.play();
+                    yPlayer.cueVideo(VIDEO_ID);
                 }
             }
 

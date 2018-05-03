@@ -21,7 +21,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".ArtistDetail"></activity>
+        <activity android:name=".ArtistDetail"
+            android:label="Artist Bio"
+            android:parentActivityName=".MainActivity">
+        </activity>
     </application>
+
 
 </manifest>
