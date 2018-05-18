@@ -143,10 +143,6 @@ public class MediaFragment extends Fragment {
             }
         });
 
-        //YouTube Code
-//        YouTubePlayerView youTubePlayerView = (YouTubePlayerView) getView().findViewById(R.id.youtubePlayer);
-//        youTubePlayerView.initialize(API_KEY, this);
-
 
         YouTubePlayerSupportFragment youtubePlayerFragment = YouTubePlayerSupportFragment.newInstance();
         FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
@@ -161,7 +157,6 @@ public class MediaFragment extends Fragment {
                     yPlayer.cueVideo(VIDEO_ID);
                 }
             }
-
 
             @Override
             public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
