@@ -47,5 +47,4 @@ public class CategoryAdapter extends FragmentPagerAdapter{
             return mContext.getString(R.string.contact_tab);
         }
     }
-
 }

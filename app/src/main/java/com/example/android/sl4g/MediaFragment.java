@@ -155,6 +155,7 @@ public class MediaFragment extends Fragment {
                     yPlayer = youTubePlayer;
                     yPlayer.setFullscreen(false);
                     yPlayer.cueVideo(VIDEO_ID);
+                    setRetainInstance(true); //Continue to have video play on orientation change
                 }
             }
 
@@ -162,7 +163,10 @@ public class MediaFragment extends Fragment {
             public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
 
             }
+
+
         });
+
 
     }
 
