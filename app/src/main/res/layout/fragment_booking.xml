@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".ContactFragment">
 
 
@@ -33,6 +34,7 @@
         android:id="@+id/enterName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         android:paddingBottom="8dp"
         android:hint="@string/name_enter_hint"/>
 
@@ -44,30 +46,33 @@
         android:paddingTop="8dp"
         android:text="@string/text_heading"/>
 
-
-    <EditText
-        android:id="@+id/enterFeedback"
+    <ScrollView
         android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+
+        <EditText
+            android:id="@+id/enterFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:inputType="textMultiLine"
+            android:gravity="top|start"
+            android:hint="@string/text_enter_hint"/>
+
+    </ScrollView>
+
+
+
+    <Button
+        android:id="@+id/prayerButton"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/text_enter_hint"/>
-
-    <android.support.v7.widget.ButtonBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/prayer_button_label"/>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/book_us_button_label"/>
+        android:layout_margin="16dp"
+        android:layout_gravity="center"
+        android:text="@string/prayer_button_label"/>
 
 
-    </android.support.v7.widget.ButtonBarLayout>
+
 
 </LinearLayout>
